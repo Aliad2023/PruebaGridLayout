@@ -45,13 +45,10 @@
         <script src="preloader.js"></script>
     </head>
     <body>
-        
         <!-- CONTENEDOR paralelo al Body -->
         <div class="contenedor-grid">
             <!-- HEADER, zona superior que se repite en todos los HTML -->
-            <header>
-
-            </header>
+            <header></header>
 
             <!-- MAIN, zona central diferente en todos los HTML, es el contenido diferenciador de las páginas -->
             <main>
@@ -59,21 +56,24 @@
                 <h2 class="main__titular">Título</h2>
                 <!-- Slogan -->
                 <p class="main__slogan">
-                    Lorem ipsum dolor sit amet consectetur. Arcu nisi vitae risus tincidunt. Massa enim ac blandit turpis dictumst enim. Semper eu velit venenatis suspendisse fringilla orci nulla. Volutpat mi.
+                    Lorem ipsum dolor sit amet consectetur. Arcu nisi vitae
+                    risus tincidunt. Massa enim ac blandit turpis dictumst enim.
+                    Semper eu velit venenatis suspendisse fringilla orci nulla.
+                    Volutpat mi.
                 </p>
                 <!-- Imágenes en paraleleo -->
                 <!-- imagen izquierda -->
                 <picture class="main__imagen01">
                     <!-- smartphone -->
                     <source
-                    srcset="
-                    img/smartphone/IMG-comida01.webp    1x,
-                    img/smartphone/IMG-comida01@2x.webp 2x,
-                    img/smartphone/IMG-comida01@3x.webp 3x
-                    "
-                    media="(min-width:320px) and (orientation:portrait)"
+                        srcset="
+                            img/smartphone/IMG-comida01.webp    1x,
+                            img/smartphone/IMG-comida01@2x.webp 2x,
+                            img/smartphone/IMG-comida01@3x.webp 3x
+                        "
+                        media="(min-width:320px) and (orientation:portrait)"
                     />
-                    
+
                     <!-- desktop -->
                     <source
                         srcset="
@@ -84,18 +84,19 @@
                     />
                     <img src="" alt="" />
                 </picture>
+
                 <!-- imagen derecha -->
                 <picture class="main__imagen02">
                     <!-- smartphone -->
                     <source
-                    srcset="
-                    img/smartphone/IMG-comida02.webp    1x,
-                    img/smartphone/IMG-comida02@2x.webp 2x,
-                    img/smartphone/IMG-comida02@3x.webp 3x
-                    "
-                    media="(min-width:320px) and (orientation:portrait)"
+                        srcset="
+                            img/smartphone/IMG-comida02.webp    1x,
+                            img/smartphone/IMG-comida02@2x.webp 2x,
+                            img/smartphone/IMG-comida02@3x.webp 3x
+                        "
+                        media="(min-width:320px) and (orientation:portrait)"
                     />
-                    
+
                     <!-- desktop -->
                     <source
                         srcset="
@@ -106,12 +107,64 @@
                     />
                     <img src="" alt="" />
                 </picture>
-                
+
+                <!-- imagen izquierda columnas 5 -->
+                <picture class="main__imagen03">
+                    <!-- smartphone -->
+                    <source
+                        srcset="
+                            img/smartphone/IMG-comida03.webp    1x,
+                            img/smartphone/IMG-comida03@2x.webp 2x,
+                            img/smartphone/IMG-comida03@3x.webp 3x
+                        "
+                        media="(min-width:320px) and (orientation:portrait)"
+                    />
+
+                    <!-- desktop -->
+                    <source
+                        srcset="
+                            img/desktop/IMG-comida03.webp    1x,
+                            img/desktop/IMG-comida03@2x.webp 2x
+                        "
+                        media="(min-width:1000px)"
+                    />
+                    <img src="" alt="" />
+                </picture>
+
+                <!-- Titulo de FOOD -->
+                <h2 class="main__food">FOOD</h2>
+                <!-- Titulo de COMIDA -->
+                <h2 class="main__comida">COMIDA</h2>
+
+                <!-- imagen derecha columnas 5 -->
+                <picture class="main__imagen04">
+                    <!-- smartphone -->
+                    <source
+                        srcset="
+                            img/smartphone/IMG-comida04.webp    1x,
+                            img/smartphone/IMG-comida04@2x.webp 2x,
+                            img/smartphone/IMG-comida04@3x.webp 3x
+                        "
+                        media="(min-width:320px) and (orientation:portrait)"
+                    />
+
+                    <!-- desktop -->
+                    <source
+                        srcset="
+                            img/desktop/IMG-comida04.webp    1x,
+                            img/desktop/IMG-comida04@2x.webp 2x
+                        "
+                        media="(min-width:1000px)"
+                    />
+                    <img src="" alt="" />
+                </picture>
+
+                <!-- Flecha para indicar que hay más contenido haciendo scroll  -->
+                <img class="flechita" src="img/flechita.svg" />
             </main>
 
             <!-- FOOTER, zona inferior que se repite en todos los HTML -->
             <footer></footer>
         </div>
-
     </body>
 </html>

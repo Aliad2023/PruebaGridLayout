@@ -3,6 +3,13 @@
     /* para no dejar que el padding sume al width */
     box-sizing: border-box;
 }
+h1,h2,h3,h4,h5,h6, p{
+    margin: 0;
+}
+
+html{
+    font-family: sans-serif;
+}
 
 /* VARIABLES */
 :root{
@@ -16,6 +23,7 @@
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: [header]60px [main]1fr [footer]1fr;
     column-gap: var(--margenGrid-S);
+    row-gap: 20px;
     @media only screen and (min-width: 1000px){
         grid-template-columns: repeat(12,1fr);
         column-gap: var(--margenGrid-D);
@@ -35,8 +43,8 @@ header{
 main{
     /* Anular el "grid-template-rows" que teniamos para el div */
     grid-template-rows: none;
+    
 
-    background-color: turquoise;
     margin: 0 var(--margenGrid-S);
     & .main__titular{
         grid-column: 1/-1;
@@ -56,6 +64,28 @@ main{
     }
     & .main__imagen02{
         grid-column: 4/7;
+    }
+    & .main__imagen03{
+        grid-column: 1/6;
+    }
+    & .main__imagen04{
+        grid-column: 2/7;
+    }
+    & .main__food, & .main__comida{
+        grid-column: span 1;
+        justify-self: center;
+        align-self: center;
+
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: bolder;
+    }
+    & .flechita{
+        width: 48px;
+        grid-column: 3/5;
+        justify-self: center;
     }
 }
 
