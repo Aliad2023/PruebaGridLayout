@@ -39,6 +39,25 @@ header{
     background-color: greenyellow;
 }
 
+/* BANNER */
+/* Smartphone */
+.banner{
+    display: none;
+}
+/* Desktop */
+@media only screen and (min-width: 1000px) {
+    .main__titular{
+        display: none;
+    }
+    .main__slogan{
+        display: none;
+    }
+    .banner{
+        display: block;
+        background: red;
+    }
+}
+
 /* MAIN */
 main{
     /* Anular el "grid-template-rows" que teniamos para el div */
