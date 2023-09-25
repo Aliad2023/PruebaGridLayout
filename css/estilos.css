@@ -1,96 +1,86 @@
 /* RESET */
-*{
+* {
     /* para no dejar que el padding sume al width */
     box-sizing: border-box;
 }
-h1,h2,h3,h4,h5,h6, p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
 }
 
-html{
+html {
     font-family: sans-serif;
 }
 
 /* VARIABLES */
-:root{
+:root {
     --margenGrid-S: 20px;
     --margenGrid-D: 40px;
 }
 
 /* CONTENEDOR */
-.contenedor-grid, main{
+.contenedor-grid,
+main {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: [header]60px [main]1fr [footer]1fr;
     column-gap: var(--margenGrid-S);
     row-gap: 20px;
-    @media only screen and (min-width: 1000px){
-        grid-template-columns: repeat(12,1fr);
+    @media only screen and (min-width: 1000px) {
+        grid-template-columns: repeat(12, 1fr);
         column-gap: var(--margenGrid-D);
     }
 }
 
 /* HEADER */
 /* ancho total */
-header, main, footer{
+header,
+main,
+footer {
     grid-column: 1/-1;
 }
-header{
+header {
     background-color: greenyellow;
 }
 
-/* BANNER */
-/* Smartphone */
-.banner{
-    display: none;
-}
-/* Desktop */
-@media only screen and (min-width: 1000px) {
-    .main__titular{
-        display: none;
-    }
-    .main__slogan{
-        display: none;
-    }
-    .banner{
-        display: block;
-        background: red;
-    }
-}
-
 /* MAIN */
-main{
+main {
     /* Anular el "grid-template-rows" que teniamos para el div */
     grid-template-rows: none;
-    
 
     margin: 0 var(--margenGrid-S);
-    & .main__titular{
+    & .main__titular {
         grid-column: 1/-1;
         grid-row: 80px;
         justify-self: center;
     }
-    & .main__slogan{
+    & .main__slogan {
         grid-column: 1/-1;
         max-width: 1024px;
         justify-self: center;
     }
-    & img{
+    & img {
         width: 100%;
     }
-    & .main__imagen01{
+    & .main__imagen01 {
         grid-column: 1/4;
     }
-    & .main__imagen02{
+    & .main__imagen02 {
         grid-column: 4/7;
     }
-    & .main__imagen03{
+    & .main__imagen03 {
         grid-column: 1/6;
     }
-    & .main__imagen04{
+    & .main__imagen04 {
         grid-column: 2/7;
     }
-    & .main__food, & .main__comida{
+    & .main__food,
+    & .main__comida {
         grid-column: span 1;
         justify-self: center;
         align-self: center;
@@ -101,15 +91,56 @@ main{
         font-size: 1.3rem;
         font-weight: bolder;
     }
-    & .flechita{
+    & .flechita {
         width: 48px;
         grid-column: 3/5;
         justify-self: center;
     }
 }
 
+/* BANNER */
+/* Smartphone */
+.banner {
+    display: none;
+}
+/* Desktop */
+@media only screen and (min-width: 1000px) {
+    /* Eliminar */
+    .main__titular,
+    .main__slogan {
+        display: none;
+    }
+
+    .banner {
+        display: block;
+        background: red url(../img/desktop/bannercomida.webp) no-repeat center;
+        background-size: cover;
+
+        grid-column: 1 / -1;
+        height: 650px;
+        
+
+        /* Grid 12 columnas */
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: [zona arriba]1fr [titulo]auto [slogan]auto [zona abajo]1fr;
+        column-gap: var(--margenGrid-D);
+        row-gap: 40px;
+
+        & .banner__titular, & .banner__slogan{
+            grid-column: 1/4;
+            grid-row: 2/3;
+            text-align: center;
+            padding: 0 40px;
+        }
+        & .banner__slogan {
+            grid-row: 3/4;
+        }
+    }
+}
+
 /* FOOTER */
 /* ancho total */
-footer{
+footer {
     background-color: grey;
 }
